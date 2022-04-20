@@ -13,15 +13,6 @@ class Student < Person
     classroom.students << self unless classroom.students.include?(self)
   end
 
-
-
-
-
-
-
-
-
-
   def play_hooky
     "¯\(ツ)/¯"
   end
