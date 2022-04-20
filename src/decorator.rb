@@ -25,10 +25,10 @@ end
 
 class TrimmerDecorator < Decorator
   def correct_name
-    if @nameable.correct_name.length > 10
-      @nameable.correct_name.slice(0, 10)
+    if @name.correct_name.length > 10
+      @name.correct_name.slice(0, 10)
     else
-      @Nameable.correct_name
+      @name.correct_name
     end
   end
 end
