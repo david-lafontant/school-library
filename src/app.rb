@@ -96,3 +96,7 @@ def create_book(books)
   puts 'Book created successfully.'
 end
 
+def patrons_list(patrons)
+  patrons.each { |patron| puts "[#{patron.class}] Name: #{patron.name}, ID: #{patron.id}, Age: #{patron.age}" }
+end
+
