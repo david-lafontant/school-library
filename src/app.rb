@@ -86,3 +86,13 @@ def create_rental(books, rentals, patron )
   rentals.push(Rental.new(date, patron[person_input], books[book_input]))
   puts 'Rental created successfully.'
 end
+
+def create_book(books)
+  print 'Title: '
+  title = gets.chomp
+  print 'Author: '
+  author = gets.chomp
+  books.push(Book.new(title, author))
+  puts 'Book created successfully.'
+end
+
