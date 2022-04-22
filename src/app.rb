@@ -66,3 +66,23 @@ def create_person(patron)
   end
   puts 'Person created successfully.'
 end
+
+
+
+def create_rental(books, rentals, patron )
+  puts 'Select a book from the following list by number'
+  books.each_with_index { |book, index| puts "#{index}) Title: '#{book.title}', Author: #{book.author}" }
+  book_input = gets.chomp.to_i
+
+  puts 'Select a person from the following list by number (Not ID): '
+  patron.each_with_index do |person, index|
+    puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+  end
+  person_input = gets.chomp.to_i
+
+  print 'Date: '
+  date = gets.chomp
+
+  rentals.push(Rental.new(date, patron[person_input], books[book_input]))
+  puts 'Rental created successfully.'
+end
