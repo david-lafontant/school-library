@@ -41,15 +41,15 @@ end
 
 def create_person(patron)
   print 'Do you want to create a student (1) or a teacher (2): '
-  choice = gets.chomp
+  choice = gets.chomp.to_i
   print 'Age: '
-  age = gets.chomp
+  age = gets.chomp.to_i
   print 'Name: '
   name = gets.chomp
   case choice
   when 1
     print 'Has parent permission? [Y/N]: '
-    input = gets.chomp.to_i
+    input = gets.chomp
     case input.upcase
     when 'Y'
       permission = true
