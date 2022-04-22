@@ -30,7 +30,7 @@ def options(books, patron, rentals)
     when 4
       create_book(books)
     when 5
-      create_rental(books, patron, rentals)
+      create_rental(books, rentals, patron)
     when 6
       rental_list_by_id(rentals)
     else
