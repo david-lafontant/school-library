@@ -100,3 +100,10 @@ def patrons_list(patrons)
   patrons.each { |patron| puts "[#{patron.class}] Name: #{patron.name}, ID: #{patron.id}, Age: #{patron.age}" }
 end
 
+def rental_list_by_id(rentals)
+  print 'ID of person: '
+  person_id = gets.chomp.to_i
+  rentals.each do |rental|
+    puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}" if rental.person.id == person_id
+  end
+end
