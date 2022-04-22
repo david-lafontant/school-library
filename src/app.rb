@@ -107,3 +107,7 @@ def rental_list_by_id(rentals)
     puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}" if rental.person.id == person_id
   end
 end
+
+def books_list(books)
+  books.each { |book| puts "Title '#{book.title}', Author #{book.author}" }
+end
