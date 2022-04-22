@@ -3,7 +3,6 @@ require_relative 'rental'
 require_relative 'teacher'
 require_relative 'student'
 
-
 def list_options
   puts 'Welcome to School library App!'
   puts "
@@ -51,13 +50,12 @@ def create_person(patron)
   when 1
     print 'Has parent permission? [Y/N]: '
     input = gets.chomp.to_i
-     if input.upcase == 'Y'
+    case input.upcase
+    when 'Y'
       permission = true
-    elsif input.upcase == 'N'
+    when 'N'
       permission = false
-   else
-      puts "Error"
-   end
+    end
     patron.push(Student.new(age, name: name, parent_permission: permission))
   when 2
     print 'Specialization: '
@@ -67,9 +65,7 @@ def create_person(patron)
   puts 'Person created successfully.'
 end
 
-
-
-def create_rental(books, rentals, patron )
+def create_rental(books, rentals, patron)
   puts 'Select a book from the following list by number'
   books.each_with_index { |book, index| puts "#{index}) Title: '#{book.title}', Author: #{book.author}" }
   book_input = gets.chomp.to_i

@@ -7,4 +7,4 @@ def main
   options(books, patron, rentals)
 end
 
-main()
+main

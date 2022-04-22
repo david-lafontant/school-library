@@ -8,6 +8,3 @@ class Rental
     @book = book
   end
 end
-
-
-
