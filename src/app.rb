@@ -19,7 +19,7 @@ end
 def options(books, patron, rentals)
   loop do
     list_options
-    option = gets.chomp.to_i
+    option = gets.chomp
     case option
     when 1
       books_list(books)
